@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_Servicio", "WCF_Servicio\WCF_Servicio.csproj", "{946C6055-5B57-4C33-A433-54C912CD6038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVista01", "WebVista01\WebVista01.csproj", "{5EF0E621-C3AA-442B-ABEA-9B297B0C06B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{946C6055-5B57-4C33-A433-54C912CD6038} = {946C6055-5B57-4C33-A433-54C912CD6038}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{946C6055-5B57-4C33-A433-54C912CD6038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946C6055-5B57-4C33-A433-54C912CD6038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946C6055-5B57-4C33-A433-54C912CD6038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946C6055-5B57-4C33-A433-54C912CD6038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF0E621-C3AA-442B-ABEA-9B297B0C06B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF0E621-C3AA-442B-ABEA-9B297B0C06B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF0E621-C3AA-442B-ABEA-9B297B0C06B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF0E621-C3AA-442B-ABEA-9B297B0C06B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F07A0E95-C64B-40D6-BDA6-A0AA283B56AA}
+	EndGlobalSection
+EndGlobal

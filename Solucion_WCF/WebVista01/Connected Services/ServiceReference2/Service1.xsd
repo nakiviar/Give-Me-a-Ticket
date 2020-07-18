@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCiudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ciudad" nillable="true" type="tns:Ciudad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCiudad" nillable="true" type="tns:ArrayOfCiudad" />
+  <xs:complexType name="Ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idCiudad" type="xs:int" />
+      <xs:element minOccurs="0" name="nomCiudad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ciudad" nillable="true" type="tns:Ciudad" />
+  <xs:complexType name="ArrayOfHorario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Horario" nillable="true" type="tns:Horario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHorario" nillable="true" type="tns:ArrayOfHorario" />
+  <xs:complexType name="Horario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="costo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="fechasalida" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horasalida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCiudad" type="xs:int" />
+      <xs:element minOccurs="0" name="idHorario" type="xs:int" />
+      <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Horario" nillable="true" type="tns:Horario" />
+  <xs:complexType name="ArrayOfPasaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pasaje" nillable="true" type="tns:Pasaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPasaje" nillable="true" type="tns:ArrayOfPasaje" />
+  <xs:complexType name="Pasaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dniper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idHorario" type="xs:int" />
+      <xs:element minOccurs="0" name="nasiento" type="xs:int" />
+      <xs:element minOccurs="0" name="nomper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="npasaje" type="xs:int" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pasaje" nillable="true" type="tns:Pasaje" />
+</xs:schema>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:64302/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" />
+  <xs:element name="listadoCiudad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listadoCiudadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" minOccurs="0" name="listadoCiudadResult" nillable="true" type="q1:ArrayOfCiudad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listado_Horarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCiudad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listado_HorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" minOccurs="0" name="listado_HorariosResult" nillable="true" type="q2:ArrayOfHorario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="horario_Esp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idHorario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="horario_EspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" minOccurs="0" name="horario_EspResult" nillable="true" type="q3:Horario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listado_Pasajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idHorario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listado_PasajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" minOccurs="0" name="listado_PasajesResult" nillable="true" type="q4:ArrayOfPasaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agregar_asiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCF_Servicio.Models" minOccurs="0" name="reg" nillable="true" type="q5:Pasaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agregar_asientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agregar_asientoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

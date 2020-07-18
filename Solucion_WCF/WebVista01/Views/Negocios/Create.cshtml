@@ -1,0 +1,121 @@
+﻿@model WebVista01.ServiceReference1.Pasaje
+    <link href="~/Content/estilos.css" type="text/css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Registro de pasajes</h2>
+<div class="contenedor2">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h1>Datos personales del pasajero</h1>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.dniper, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dniper, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.dniper, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idHorario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.idHorario, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.idHorario } })
+                @Html.ValidationMessageFor(model => model.idHorario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nasiento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nasiento, new { htmlAttributes = new { @class = "form-control" ,@Value= ViewBag.asiento } })
+                @Html.ValidationMessageFor(model => model.nasiento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nomper, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nomper, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nomper, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.precio, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.precio, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.costo } })
+                @Html.ValidationMessageFor(model => model.precio, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div style="visibility:hidden">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.npasaje, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.npasaje, new { htmlAttributes = new { @class = "form-control", @Value = 1 } })
+                    @Html.ValidationMessageFor(model => model.npasaje, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+    }
+</div>
+<div class="contenedor1">
+    @for (int i = 1; i <= (int)30; i++)
+    {
+
+        <div class="pasajes">
+            <table>
+
+                <tr>
+                    <td>
+                        <p>
+                            Asiento : @i.ToString()
+                        </p>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <p>
+                            Disponibilidad :
+                            disponible
+                        </p>
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" class="enlace">
+                        @Html.ActionLink("Seleccionar", "Create", new {nasiento= @i.ToString() })
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+
+
+</div>
+<br />
+
+<div>
+    @Html.ActionLink("Back to List", "Inicio")
+</div>
+<div style="visibility:hidden">
+    @ViewBag.agregar
+</div>

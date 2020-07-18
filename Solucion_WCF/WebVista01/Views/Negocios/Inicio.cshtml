@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebVista01.ServiceReference1.Horario>
+    <link href="~/Content/estilos.css" type="text/css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Inicio";
+}
+
+
+
+<h2>Registro de pasajes</h2>
+<br />
+<br />
+<div class="todo">
+    <div class="menu">
+        @foreach (var item in ViewBag.ciudades)
+        {
+            <br />
+            @Html.ActionLink((string)item.nomCiudad, "Inicio", new { idCiudad = item.idCiudad })
+        }
+
+
+    </div>
+    <div class="contenedor">
+        @foreach (var item in Model)
+        {
+
+            <div class="horarios">
+                <table>
+
+                    <tr>
+                        <td>
+                            <p>
+                                Fecha :
+                                @Html.DisplayFor(modelItem => item.fechasalida)
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Hora :
+                                @Html.DisplayFor(modelItem => item.horasalida)
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Placa :
+                                @Html.DisplayFor(modelItem => item.placa)
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Costo :
+                                @Html.DisplayFor(modelItem => item.costo)
+                            </p>
+                        </td>
+
+                    </tr>
+
+                    <!--
+                    .idCiudad)
+                     item.idHorario)-->
+
+
+
+                    <tr>
+                        <td colspan="2" class="enlace">
+                            @Html.ActionLink("Seleccionar", "Create", new { idHorario = item.idHorario })
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

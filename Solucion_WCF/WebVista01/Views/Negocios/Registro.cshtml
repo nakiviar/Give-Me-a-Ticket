@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebVista01.ServiceReference1.Pasaje>
+<link href="~/Content/estilos.css" type="text/css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Registro";
+}
+
+<h2>Registro</h2>
+<div class="contenedor2">
+    <h1>Datos personales del pasajero</h1>
+    <p>Asiento:</p><br />
+    <p>Costo:</p><br />
+    <p>DNI:</p><br />
+    <p>Nombre:</p><br />
+
+</div>
+<div>
+    @for (int i = 1; i <= (int)30; i++)
+    {
+       
+            <div class="pasajes">
+                <table>
+
+                    <tr>
+                        <td>
+                            <p>
+                                Asiento : @i.ToString()
+                            </p>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <p>
+                                Disponibilidad :
+                                disponible
+                            </p>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2" class="enlace">
+                            @Html.ActionLink("Seleccionar", "Registro", new { npasaje = @i.ToString() })
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        }
+
+
+    </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

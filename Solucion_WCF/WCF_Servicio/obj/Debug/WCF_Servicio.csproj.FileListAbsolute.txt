@@ -1,0 +1,7 @@
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\bin\WCF_Servicio.dll.config
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\bin\WCF_Servicio.dll
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\bin\WCF_Servicio.pdb
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\obj\Debug\WCF_Servicio.csproj.CoreCompileInputs.cache
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\obj\Debug\WCF_Servicio.dll
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\obj\Debug\WCF_Servicio.pdb
+D:\estudio\damaso\Solucion_WCF\WCF_Servicio\obj\Debug\WCF_Servicio.csprojAssemblyReference.cache

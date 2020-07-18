@@ -1,0 +1,19 @@
+use Negocios2020;
+
+
+-- Listar Clientes y Paises
+create procedure 
+
+
+
+
+-- Funcion que genere un codigo autogenerado
+-- C9999
+CREATE FUNCTION [dbo].[FT_COD_DEVOLUCION]()
+RETURNS VARCHAR(5)
+AS
+    BEGIN
+        return Concat('C',);
+    END
+
+GO
